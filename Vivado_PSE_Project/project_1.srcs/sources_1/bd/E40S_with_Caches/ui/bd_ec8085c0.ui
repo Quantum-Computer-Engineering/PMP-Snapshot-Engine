@@ -1,0 +1,62 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-492,-43",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port port-id_sys_reset -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_decryption_enabled_cpu -pg 1 -lvl 0 -x 0 -y -20 -defaultsOSRD
+preplace port port-id_HSEL -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace port port-id_HREADYOUT -pg 1 -lvl 3 -x 710 -y 90 -defaultsOSRD
+preplace port port-id_HWRITE -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace port port-id_HREADY -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port port-id_mem_valid -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port port-id_mem_rw_enable -pg 1 -lvl 3 -x 710 -y 300 -defaultsOSRD
+preplace port port-id_mem_req -pg 1 -lvl 3 -x 710 -y 280 -defaultsOSRD
+preplace port port-id_cache_ready -pg 1 -lvl 3 -x 710 -y 220 -defaultsOSRD
+preplace port port-id_cache_rw_enable -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port port-id_cache_req -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace portBus cache_address -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
+preplace portBus HADDR -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace portBus HTRANS -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace portBus HRDATA -pg 1 -lvl 3 -x 710 -y 70 -defaultsOSRD
+preplace portBus HWDATA -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace portBus mem_address -pg 1 -lvl 3 -x 710 -y 260 -defaultsOSRD
+preplace portBus mem_wdata -pg 1 -lvl 3 -x 710 -y 240 -defaultsOSRD
+preplace portBus mem_rdata -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace portBus cache_wdata -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace portBus cache_rdata -pg 1 -lvl 3 -x 710 -y 200 -defaultsOSRD
+preplace inst AHB2ENCRYPTCTRL_0 -pg 1 -lvl 1 -x 360 -y 90 -defaultsOSRD
+preplace inst UA_encrypt_0 -pg 1 -lvl 1 -x 360 -y 380 -defaultsOSRD
+preplace netloc AHB2ENCRYPTCTRL_0_HRDATA 1 1 2 640J 70 NJ
+preplace netloc AHB2ENCRYPTCTRL_0_HREADYOUT 1 1 2 650J 90 NJ
+preplace netloc AHB2ENCRYPTCTRL_0_key_o 1 0 2 130 560 590
+preplace netloc AHB2ENCRYPTCTRL_0_key_valid_o 1 0 2 60 570 580
+preplace netloc HADDR_1 1 0 1 100J 70n
+preplace netloc HREADY_1 1 0 1 150J 170n
+preplace netloc HSEL_1 1 0 1 140J 150n
+preplace netloc HTRANS_1 1 0 1 110J 90n
+preplace netloc HWDATA_1 1 0 1 130J 130n
+preplace netloc HWRITE_1 1 0 1 120J 110n
+preplace netloc UA_encrypt_0_cache_rdata 1 1 2 600 200 NJ
+preplace netloc UA_encrypt_0_cache_ready 1 1 2 610 220 NJ
+preplace netloc UA_encrypt_0_mem_address 1 1 2 630J 260 NJ
+preplace netloc UA_encrypt_0_mem_req 1 1 2 640 280 NJ
+preplace netloc UA_encrypt_0_mem_rw_enable 1 1 2 650 300 NJ
+preplace netloc UA_encrypt_0_mem_wdata 1 1 2 620J 240 NJ
+preplace netloc cache_address_1 1 0 1 70J 10n
+preplace netloc cache_req_1 1 0 1 50J 250n
+preplace netloc cache_rw_enable_1 1 0 1 40J 290n
+preplace netloc cache_wdata_1 1 0 1 60J 230n
+preplace netloc decryption_enabled_cpu_1 1 0 2 150 550 570
+preplace netloc mem_rdata_1 1 0 1 30J 310n
+preplace netloc mem_valid_1 1 0 1 20J 330n
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 1 90 50n
+preplace netloc sys_clock_1 1 0 1 80 30n
+levelinfo -pg 1 0 360 670 710
+pagesize -pg 1 -db -bbox -sgen -210 -40 890 580
+"
+}
+0

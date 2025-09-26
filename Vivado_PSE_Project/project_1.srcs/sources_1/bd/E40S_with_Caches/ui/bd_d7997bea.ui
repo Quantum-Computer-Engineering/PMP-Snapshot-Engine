@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.811573",
+   "Default View_TopLeft":"-322,-46",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port port-id_sys_reset -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace port port-id_HREADYOUT_S0 -pg 1 -lvl 0 -x -10 -y 250 -defaultsOSRD
+preplace port port-id_HREADYOUT_S2 -pg 1 -lvl 0 -x -10 -y 270 -defaultsOSRD
+preplace port port-id_HREADYOUT_S4 -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace port port-id_HREADYOUT_S7 -pg 1 -lvl 0 -x -10 -y 310 -defaultsOSRD
+preplace port port-id_HREADY -pg 1 -lvl 3 -x 770 -y 180 -defaultsOSRD
+preplace port port-id_HSEL_S0 -pg 1 -lvl 3 -x 770 -y 470 -defaultsOSRD
+preplace port port-id_HSEL_S2 -pg 1 -lvl 3 -x 770 -y 490 -defaultsOSRD
+preplace port port-id_HSEL_S4 -pg 1 -lvl 3 -x 770 -y 510 -defaultsOSRD
+preplace port port-id_HSEL_S7 -pg 1 -lvl 3 -x 770 -y 550 -defaultsOSRD
+preplace port port-id_HSEL_S8 -pg 1 -lvl 3 -x 770 -y 570 -defaultsOSRD
+preplace port port-id_HREADYOUT_S8 -pg 1 -lvl 0 -x -10 -y 330 -defaultsOSRD
+preplace portBus HRDATA_S0 -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace portBus HRDATA_S2 -pg 1 -lvl 0 -x -10 -y 110 -defaultsOSRD
+preplace portBus HRDATA_S4 -pg 1 -lvl 0 -x -10 -y 130 -defaultsOSRD
+preplace portBus HRDATA_S7 -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace portBus HRDATA -pg 1 -lvl 3 -x 770 -y 200 -defaultsOSRD
+preplace portBus HADDR -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace portBus HRDATA_S8 -pg 1 -lvl 0 -x -10 -y 170 -defaultsOSRD
+preplace inst AHBMUX_0 -pg 1 -lvl 2 -x 570 -y 190 -defaultsOSRD
+preplace inst AHBDCD_0 -pg 1 -lvl 1 -x 170 -y 540 -defaultsOSRD
+preplace inst deadbeef -pg 1 -lvl 1 -x 170 -y 370 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 170 -y 210 -defaultsOSRD
+preplace netloc AHB2DUMP_0_HRDATA 1 0 2 NJ 110 350J
+preplace netloc AHB2DUMP_0_HREADYOUT 1 0 2 10J 280 350J
+preplace netloc AHB2TIMER_0_HRDATA 1 0 2 10J 140 330J
+preplace netloc AHB2TIMER_0_HREADYOUT 1 0 2 10J 300 390J
+preplace netloc AHB2UART_0_HRDATA 1 0 2 NJ 130 340J
+preplace netloc AHB2UART_0_HREADYOUT 1 0 2 NJ 290 380J
+preplace netloc AHBDCD_0_HSEL_S0 1 1 2 NJ 470 NJ
+preplace netloc AHBDCD_0_HSEL_S2 1 1 2 NJ 490 NJ
+preplace netloc AHBDCD_0_HSEL_S4 1 1 2 NJ 510 NJ
+preplace netloc AHBDCD_0_HSEL_S7 1 1 2 NJ 550 NJ
+preplace netloc AHBDCD_0_HSEL_S8 1 1 2 NJ 570 NJ
+preplace netloc AHBDCD_0_MUX_SEL 1 1 1 370 90n
+preplace netloc AHBMUX_0_HRDATA 1 2 1 NJ 200
+preplace netloc AHB_CACHE_1_HREADYOUT 1 2 1 NJ 180
+preplace netloc BRAM_HRDATA 1 0 2 NJ 90 360J
+preplace netloc BRAM_HREADYOUT 1 0 2 20J 270 320J
+preplace netloc HRDATA_S8_1 1 0 2 20J 150 320J
+preplace netloc HREADYOUT_S8_1 1 0 2 20J 310 NJ
+preplace netloc deadbeef_dout 1 1 1 390J 330n
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 2 NJ 70 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HADDR 1 0 1 NJ 540
+preplace netloc sys_clock_1 1 0 2 NJ 50 NJ
+preplace netloc xlconstant_1_dout 1 1 1 NJ 210
+levelinfo -pg 1 -10 170 570 770
+pagesize -pg 1 -db -bbox -sgen -190 -10 930 670
+"
+}
+0

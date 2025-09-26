@@ -1,0 +1,245 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Addressing View_Layers":"/AHB2UART_0_uart_irq:false|/AHB2TIMER_0_timer_irq:false|",
+   "Addressing View_ScaleFactor":"0.8",
+   "Addressing View_TopLeft":"1535,316",
+   "Color Coded_ScaleFactor":"0.244262",
+   "Color Coded_TopLeft":"-119,-688",
+   "Default View_Layers":"/AHB2UART_0_uart_irq:true|/AHB2TIMER_0_timer_irq:true|/microblaze_0_Clk:true|",
+   "Default View_ScaleFactor":"0.755769",
+   "Default View_TopLeft":"4378,224",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeInterrupt":"true",
+   "Display-PortTypeOthers":"true",
+   "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"0.284383",
+   "Grouping and No Loops_TopLeft":"-116,-538",
+   "Interfaces View_Layers":"/AHB2UART_0_uart_irq:false|/AHB2TIMER_0_timer_irq:false|/microblaze_0_Clk:false|",
+   "Interfaces View_ScaleFactor":"1.0",
+   "Interfaces View_TopLeft":"1660,1072",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -100 -y 20 -defaultsOSRD
+preplace port port-id_sys_reset -pg 1 -lvl 0 -x -100 -y 620 -defaultsOSRD
+preplace portBus OUTPUT_LEDs -pg 1 -lvl 10 -x 4020 -y 160 -defaultsOSRD
+preplace portBus OUTPUT_LED_reset -pg 1 -lvl 10 -x 4020 -y 100 -defaultsOSRD
+preplace inst AHB2UART_0 -pg 1 -lvl 3 -x 1080 -y 220 -swap {8 10 3 4 5 6 0 2 1 9 7 11 12} -defaultsOSRD -pinDir HCLK left -pinY HCLK 240L -pinDir HRESETn left -pinY HRESETn 260L -pinBusDir HADDR left -pinBusY HADDR 140L -pinBusDir HTRANS left -pinBusY HTRANS 160L -pinBusDir HWDATA left -pinBusY HWDATA 180L -pinDir HWRITE left -pinY HWRITE 200L -pinDir HREADY left -pinY HREADY 20L -pinDir HREADYOUT left -pinY HREADYOUT 60L -pinBusDir HRDATA left -pinBusY HRDATA 40L -pinDir HSEL right -pinY HSEL 20R -pinDir RsRx left -pinY RsRx 220L -pinDir RsTx right -pinY RsTx 40R -pinDir uart_irq right -pinY uart_irq 260R
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 80 -y 60 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst low -pg 1 -lvl 3 -x 1080 -y 1020 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst deadbeef -pg 1 -lvl 1 -x 80 -y 160 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst xlconstant_9 -pg 1 -lvl 2 -x 450 -y 520 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst high -pg 1 -lvl 4 -x 1690 -y 1160 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst xlslice_0 -pg 1 -lvl 9 -x 3900 -y 140 -defaultsOSRD -pinBusDir Din left -pinBusY Din 20L -pinBusDir Dout right -pinBusY Dout 20R
+preplace inst AHBDCD_0 -pg 1 -lvl 7 -x 3310 -y 420 -swap {8 6 3 2 4 5 1 7 0} -defaultsOSRD -pinBusDir HADDR left -pinBusY HADDR 100L -pinDir RESET left -pinY RESET 80L -pinDir HSEL_S0 right -pinY HSEL_S0 40R -pinDir HSEL_S2 right -pinY HSEL_S2 20R -pinDir HSEL_S4 left -pinY HSEL_S4 60L -pinDir HSEL_S5 right -pinY HSEL_S5 60R -pinDir HSEL_S7 left -pinY HSEL_S7 40L -pinDir HSEL_NOMAP right -pinY HSEL_NOMAP 80R -pinBusDir MUX_SEL left -pinBusY MUX_SEL 20L
+preplace inst AHB2TIMER_0 -pg 1 -lvl 1 -x 80 -y 260 -swap {0 1 5 7 6 8 4 9 2 3 10 11} -defaultsOSRD -pinDir HCLK left -pinY HCLK 20L -pinDir HRESETn left -pinY HRESETn 360L -pinBusDir HADDR right -pinBusY HADDR 140R -pinBusDir HWDATA right -pinBusY HWDATA 180R -pinBusDir HTRANS right -pinBusY HTRANS 160R -pinDir HWRITE right -pinY HWRITE 200R -pinDir HSEL right -pinY HSEL 120R -pinDir HREADY right -pinY HREADY 220R -pinBusDir HRDATA right -pinBusY HRDATA 20R -pinDir HREADYOUT right -pinY HREADYOUT 40R -pinBusDir counter_value right -pinBusY counter_value 340R -pinDir timer_irq right -pinY timer_irq 360R
+preplace inst vio_0 -pg 1 -lvl 7 -x 3310 -y 200 -swap {8 2 3 4 5 0 7 6 1} -defaultsOSRD -pinDir clk left -pinY clk 140L -pinBusDir probe_in0 left -pinBusY probe_in0 60L -pinBusDir probe_in1 left -pinBusY probe_in1 80L -pinBusDir probe_in2 left -pinBusY probe_in2 100L -pinBusDir probe_in3 left -pinBusY probe_in3 120L -pinBusDir probe_in4 left -pinBusY probe_in4 20L -pinBusDir probe_out0 right -pinBusY probe_out0 40R -pinBusDir probe_out1 right -pinBusY probe_out1 20R -pinBusDir probe_out2 left -pinBusY probe_out2 40L
+preplace inst benchmark_output_0 -pg 1 -lvl 6 -x 2690 -y 280 -swap {1 2 0 6 7 3 4 5} -defaultsOSRD -pinDir clk left -pinY clk 180L -pinDir reset left -pinY reset 200L -pinBusDir timer_counter_value left -pinBusY timer_counter_value 20L -pinDir bm_gpio_1 right -pinY bm_gpio_1 180R -pinDir bm_gpio_2 right -pinY bm_gpio_2 200R -pinDir diff_mode_enable right -pinY diff_mode_enable 20R -pinBusDir cycles_bm1_o right -pinBusY cycles_bm1_o 40R -pinBusDir cycles_bm2_o right -pinBusY cycles_bm2_o 60R
+preplace inst BRAM -pg 1 -lvl 2 -x 450 -y 800 -swap {0 1 2 5 4 9 10 6 7 11 3 8 12} -defaultsOSRD -pinBusDir instr_addr right -pinBusY instr_addr 60R -pinDir sys_clock left -pinY sys_clock 20L -pinDir sys_reset left -pinY sys_reset 40L -pinDir instr_req right -pinY instr_req 120R -pinDir instr_rvalid right -pinY instr_rvalid 100R -pinBusDir data_addr right -pinBusY data_addr 480R -pinDir data_req right -pinY data_req 500R -pinDir data_we right -pinY data_we 400R -pinDir data_rvalid right -pinY data_rvalid 440R -pinBusDir data_wdata right -pinBusY data_wdata 520R -pinBusDir instr_rdata right -pinBusY instr_rdata 80R -pinBusDir data_rdata right -pinBusY data_rdata 460R -pinBusDir be_i right -pinBusY be_i 540R
+preplace inst AHB2DUMP_0 -pg 1 -lvl 8 -x 3630 -y 140 -swap {2 6 7 8 9 10 12 13 14 4 0 11 3 5 1} -defaultsOSRD -pinDir HSEL left -pinY HSEL 300L -pinDir HCLK left -pinY HCLK 500L -pinDir HRESETn left -pinY HRESETn 520L -pinDir HREADY left -pinY HREADY 540L -pinBusDir HADDR left -pinBusY HADDR 620L -pinBusDir HTRANS left -pinBusY HTRANS 640L -pinDir HWRITE left -pinY HWRITE 680L -pinBusDir HSIZE left -pinBusY HSIZE 740L -pinBusDir HWDATA left -pinBusY HWDATA 760L -pinDir HREADYOUT left -pinY HREADYOUT 460L -pinBusDir HRDATA left -pinBusY HRDATA 20L -pinBusDir LEDS right -pinBusY LEDS 20R -pinDir GPIOs_BENCHMARK_1 left -pinY GPIOs_BENCHMARK_1 440L -pinDir GPIOs_BENCHMARK_2 left -pinY GPIOs_BENCHMARK_2 480L -pinBusDir GPIO_INPUTS_10_8 left -pinBusY GPIO_INPUTS_10_8 80L
+preplace inst irqs -pg 1 -lvl 4 -x 1690 -y 490 -defaultsOSRD -pinBusDir In2 left -pinBusY In2 20L -pinBusDir In7 left -pinBusY In7 40L -pinBusDir dout right -pinBusY dout 40R
+preplace inst AHBMUX_0 -pg 1 -lvl 2 -x 450 -y 40 -swap {0 10 2 3 7 6 1 11 8 9 5 4 12} -defaultsOSRD -pinDir HCLK left -pinY HCLK 20L -pinDir HRESETn left -pinY HRESETn 280L -pinBusDir MUX_SEL right -pinBusY MUX_SEL 100R -pinBusDir HRDATA_S2 right -pinBusY HRDATA_S2 120R -pinBusDir HRDATA_S4 right -pinBusY HRDATA_S4 220R -pinBusDir HRDATA_S7 left -pinBusY HRDATA_S7 240L -pinBusDir HRDATA_NOMAP left -pinBusY HRDATA_NOMAP 40L -pinDir HREADYOUT_S2 right -pinY HREADYOUT_S2 260R -pinDir HREADYOUT_S4 right -pinY HREADYOUT_S4 240R -pinDir HREADYOUT_S7 left -pinY HREADYOUT_S7 260L -pinDir HREADYOUT_NOMAP left -pinY HREADYOUT_NOMAP 140L -pinDir HREADY right -pinY HREADY 200R -pinBusDir HRDATA right -pinBusY HRDATA 280R
+preplace inst BRAM_AHB_MUX_0 -pg 1 -lvl 6 -x 2690 -y 740 -swap {2 3 4 11 5 9 6 10 7 8 25 16 14 26 12 27 15 17 19 21 22 23 18 24 20 1 0 13} -defaultsOSRD -pinDir clk_i left -pinY clk_i 60L -pinDir rst_ni left -pinY rst_ni 80L -pinDir lsu_req_i left -pinY lsu_req_i 140L -pinDir lsu_gnt_o left -pinY lsu_gnt_o 280L -pinBusDir lsu_addr_i left -pinBusY lsu_addr_i 160L -pinBusDir lsu_rdata_o left -pinBusY lsu_rdata_o 240L -pinBusDir lsu_wdata_i left -pinBusY lsu_wdata_i 180L -pinDir lsu_rvalid_o left -pinY lsu_rvalid_o 260L -pinDir lsu_we_i left -pinY lsu_we_i 200L -pinBusDir lsu_be_i left -pinBusY lsu_be_i 220L -pinDir bram_req_o left -pinY bram_req_o 560L -pinBusDir bram_addr_o left -pinBusY bram_addr_o 540L -pinDir bram_rvalid_i left -pinY bram_rvalid_i 500L -pinBusDir bram_wdata_o left -pinBusY bram_wdata_o 580L -pinDir bram_we_o left -pinY bram_we_o 460L -pinBusDir bram_be_o left -pinBusY bram_be_o 600L -pinBusDir bram_rdata_i left -pinBusY bram_rdata_i 520L -pinBusDir dat_HADDR right -pinBusY dat_HADDR 20R -pinBusDir dat_HBURST right -pinBusY dat_HBURST 60R -pinDir dat_HMASTLOCK right -pinY dat_HMASTLOCK 100R -pinBusDir dat_HPROT right -pinBusY dat_HPROT 120R -pinBusDir dat_HSIZE right -pinBusY dat_HSIZE 140R -pinBusDir dat_HTRANS right -pinBusY dat_HTRANS 40R -pinBusDir dat_HWDATA right -pinBusY dat_HWDATA 160R -pinDir dat_HWRITE right -pinY dat_HWRITE 80R -pinBusDir dat_HRDATA left -pinBusY dat_HRDATA 40L -pinDir dat_HREADY left -pinY dat_HREADY 20L -pinDir dat_HRESP left -pinY dat_HRESP 480L
+preplace inst RISCV_CORE -pg 1 -lvl 5 -x 2260 -y 860 -swap {1 3 20 4 2 5 7 6 8 15 14 9 12 11 10 13 16 0 21 19 17 18} -defaultsOSRD -pinDir clk_i left -pinY clk_i 40L -pinDir rst_ni left -pinY rst_ni 80L -pinDir scan_cg_en_i left -pinY scan_cg_en_i 260L -pinDir instr_req_o left -pinY instr_req_o 100L -pinDir instr_gnt_i left -pinY instr_gnt_i 60L -pinDir instr_rvalid_i left -pinY instr_rvalid_i 120L -pinBusDir instr_addr_o left -pinBusY instr_addr_o 160L -pinBusDir instr_rdata_i left -pinBusY instr_rdata_i 140L -pinDir data_req_o right -pinY data_req_o 20R -pinDir data_gnt_i right -pinY data_gnt_i 160R -pinDir data_rvalid_i right -pinY data_rvalid_i 140R -pinBusDir data_addr_o right -pinBusY data_addr_o 40R -pinBusDir data_be_o right -pinBusY data_be_o 100R -pinDir data_we_o right -pinY data_we_o 80R -pinBusDir data_wdata_o right -pinBusY data_wdata_o 60R -pinBusDir data_rdata_i right -pinBusY data_rdata_i 120R -pinBusDir mcycle_o right -pinBusY mcycle_o 180R -pinBusDir irq_i left -pinBusY irq_i 20L -pinDir wu_wfe_i left -pinY wu_wfe_i 280L -pinBusDir debug_pc_o right -pinBusY debug_pc_o 200R -pinDir fetch_enable_i left -pinY fetch_enable_i 200L -pinDir fencei_flush_ack_i left -pinY fencei_flush_ack_i 220L
+preplace inst low2 -pg 1 -lvl 2 -x 450 -y 700 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst high1 -pg 1 -lvl 3 -x 1080 -y 1120 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst inst_cache_16_way -pg 1 -lvl 4 -x 1690 -y 860 -swap {0 10 14 1 11 5 12 13 8 16 3 2 9 7 4 6 15 17} -defaultsOSRD -pinDir clock left -pinY clock 20L -pinDir reset left -pinY reset 140L -pinBusDir cpu_address_pulsed right -pinBusY cpu_address_pulsed 200R -pinBusDir cpu_din left -pinBusY cpu_din 40L -pinBusDir cpu_dout right -pinBusY cpu_dout 180R -pinDir cpu_req_pulsed_trigger right -pinY cpu_req_pulsed_trigger 60R -pinDir cpu_req left -pinY cpu_req 160L -pinDir cpu_rw_enable left -pinY cpu_rw_enable 180L -pinDir cpu_ready right -pinY cpu_ready 140R -pinBusDir cpu_byte_en left -pinBusY cpu_byte_en 220L -pinBusDir mem_din left -pinBusY mem_din 60L -pinBusDir mem_dout right -pinBusY mem_dout 20R -pinBusDir mem_address left -pinBusY mem_address 120L -pinDir mem_req left -pinY mem_req 100L -pinDir mem_rw_enable right -pinY mem_rw_enable 40R -pinDir mem_ready left -pinY mem_ready 80L -pinDir enc_bit_i left -pinY enc_bit_i 200L -pinDir write_back_encryption_enabled_o right -pinY write_back_encryption_enabled_o 220R
+preplace inst mem_32_to_128_0 -pg 1 -lvl 3 -x 1080 -y 780 -swap {0 1 9 10 4 7 6 8 5 2 3} -defaultsOSRD -pinDir clk left -pinY clk 20L -pinDir reset left -pinY reset 40L -pinDir cache_line_req_i right -pinY cache_line_req_i 80R -pinBusDir cache_line_address_i right -pinBusY cache_line_address_i 100R -pinDir cache_line_we_i left -pinY cache_line_we_i 60L -pinDir bram_rvalid_i left -pinY bram_rvalid_i 120L -pinBusDir bram_rdata_i left -pinBusY bram_rdata_i 100L -pinDir bram_req_o left -pinY bram_req_o 140L -pinBusDir bram_address_o left -pinBusY bram_address_o 80L -pinBusDir cache_line_rdata_o right -pinBusY cache_line_rdata_o 40R -pinDir cache_line_rvalid_o right -pinY cache_line_rvalid_o 60R
+preplace netloc AHB2DUMP_0_GPIOs_BENCHMARK_1 1 6 2 3080 580 NJ
+preplace netloc AHB2DUMP_0_GPIOs_BENCHMARK_2 1 6 2 3000 620 NJ
+preplace netloc AHB2DUMP_0_HRDATA 1 2 6 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ
+preplace netloc AHB2DUMP_0_HREADYOUT 1 2 6 860J 660 NJ 660 NJ 660 NJ 660 2980J 600 NJ
+preplace netloc AHB2DUMP_0_LEDS 1 8 1 NJ 160
+preplace netloc AHB2TIMER_0_HRDATA 1 1 1 N 280
+preplace netloc AHB2TIMER_0_HREADYOUT 1 1 1 N 300
+preplace netloc AHB2TIMER_0_counter_value 1 1 6 N 600 800J 540 1340J 450 NJ 450 2440 220 NJ
+preplace netloc AHB2TIMER_0_timer_irq 1 1 3 N 620 660J 560 1460J
+preplace netloc AHB2UART_0_HRDATA 1 2 1 NJ 260
+preplace netloc AHB2UART_0_HREADYOUT 1 2 1 NJ 280
+preplace netloc AHB2UART_0_uart_irq 1 3 1 1460 480n
+preplace netloc AHBDCD_0_HSEL_S2 1 7 1 N 440
+preplace netloc AHBDCD_0_HSEL_S4 1 3 4 NJ 240 NJ 240 NJ 240 3020J
+preplace netloc AHBDCD_0_HSEL_S7 1 1 6 NJ 380 660J 180 NJ 180 NJ 180 NJ 180 3100J
+preplace netloc AHBDCD_0_MUX_SEL 1 2 5 NJ 140 NJ 140 NJ 140 NJ 140 3120J
+preplace netloc AHBMUX_0_HRDATA 1 2 4 680 720 NJ 720 1920J 780 NJ
+preplace netloc AHB_CACHE_1_HREADYOUT 1 1 7 NJ 480 820 600 NJ 600 NJ 600 2440 680 NJ 680 NJ
+preplace netloc BRAM_AHB_MUX_0_bram_addr_o 1 2 4 NJ 1280 1360J 1300 2020J 1280 NJ
+preplace netloc BRAM_AHB_MUX_0_bram_be_o 1 2 4 NJ 1340 1300J 1360 2080J 1340 NJ
+preplace netloc BRAM_AHB_MUX_0_bram_req_o 1 2 4 NJ 1300 1340J 1320 2040J 1300 NJ
+preplace netloc BRAM_AHB_MUX_0_bram_wdata_o 1 2 4 NJ 1320 1320J 1340 2060J 1320 NJ
+preplace netloc BRAM_AHB_MUX_0_bram_we_o 1 2 4 NJ 1200 1420J 1240 1920J 1200 NJ
+preplace netloc BRAM_AHB_MUX_0_dat_HSIZE 1 6 2 N 880 NJ
+preplace netloc BRAM_AHB_MUX_0_lsu_gnt_o 1 5 1 NJ 1020
+preplace netloc BRAM_AHB_MUX_0_lsu_rdata_o 1 5 1 NJ 980
+preplace netloc BRAM_AHB_MUX_0_lsu_rvalid_o 1 5 1 NJ 1000
+preplace netloc RISCV_CORE_data_addr_o 1 5 1 N 900
+preplace netloc RISCV_CORE_data_be_o 1 5 1 N 960
+preplace netloc RISCV_CORE_data_req_o 1 5 1 N 880
+preplace netloc RISCV_CORE_data_wdata_o 1 5 1 N 920
+preplace netloc RISCV_CORE_data_we_o 1 5 1 N 940
+preplace netloc benchmark_output_0_cycles_bm1_o 1 6 1 2960 260n
+preplace netloc benchmark_output_0_cycles_bm2_o 1 6 1 3060 280n
+preplace netloc blk_mem_gen_0_doutb 1 2 4 NJ 1260 1380J 1280 1980J 1260 N
+preplace netloc bram_interface_data_valid 1 2 4 NJ 1240 1400J 1260 1940J 1240 N
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 10 -80 680 260 660 840 980 1360 820 1960 820 2480 560 3160 660 3460 100 NJ 100 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HADDR 1 1 7 NJ 400 640 580 NJ 580 NJ 580 NJ 580 2960 760 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HTRANS 1 1 7 NJ 420 700 700 NJ 700 NJ 700 NJ 700 2900 780 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HWDATA 1 1 7 NJ 440 760 640 NJ 640 NJ 640 NJ 640 2920 900 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HWRITE 1 1 7 NJ 460 720 620 NJ 620 NJ 620 NJ 620 2940 820 NJ
+preplace netloc riscv_top_ahb3lite_0_instr_req_o 1 4 1 1920 920n
+preplace netloc sys_clock_1 1 0 8 -80 20 240 640 740 680 1460 800 1980 800 2460 540 3140 640 NJ
+preplace netloc vio_0_probe_out1 1 7 1 N 220
+preplace netloc vio_0_probe_out2 1 6 1 3040J 240n
+preplace netloc xlconcat_0_dout 1 4 1 1940 530n
+preplace netloc xlconstant_10_dout 1 4 2 1980 1220 NJ
+preplace netloc xlconstant_1_dout 1 1 1 NJ 80
+preplace netloc xlconstant_4_dout 1 3 2 1440 1380 2000
+preplace netloc xlconstant_5_dout 1 1 1 NJ 180
+preplace netloc xlconstant_9_dout 1 2 1 780J 440n
+preplace netloc xlslice_0_Dout 1 9 1 NJ 160
+preplace netloc low2_dout 1 2 2 640 740 1440
+preplace netloc high1_dout 1 3 1 1460J 1080n
+preplace netloc cache_16_way_0_cpu_dout 1 4 1 1940 1000n
+preplace netloc inst_cache_16_way_mem_req 1 3 1 1400J 860n
+preplace netloc inst_cache_16_way_mem_address 1 3 1 1380J 880n
+preplace netloc mem_32_to_128_0_bram_address_o 1 2 1 NJ 860
+preplace netloc mem_32_to_128_0_cache_line_rdata_o 1 3 1 1340 820n
+preplace netloc mem_32_to_128_0_bram_req_o 1 2 1 NJ 920
+preplace netloc BRAM_instr_rvalid 1 2 1 N 900
+preplace netloc BRAM_instr_rdata 1 2 1 N 880
+preplace netloc mem_32_to_128_0_cache_line_rvalid_o 1 3 1 1420 840n
+preplace netloc RISCV_CORE_instr_addr_o 1 4 1 1960J 1020n
+preplace netloc inst_cache_16_way_cpu_ready 1 4 1 1920 980n
+levelinfo -pg 1 -100 80 450 1080 1690 2260 2690 3310 3630 3900 4020
+pagesize -pg 1 -db -bbox -sgen -220 0 4250 1400
+",
+   "No Loops_ScaleFactor":"0.444545",
+   "No Loops_TopLeft":"328,115",
+   "Reduced Jogs_Layers":"/AHB2UART_0_uart_irq:true|/AHB2TIMER_0_timer_irq:true|",
+   "Reduced Jogs_ScaleFactor":"0.612374",
+   "Reduced Jogs_TopLeft":"683,563",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_reset -pg 1 -lvl 0 -x 0 -y 730 -defaultsOSRD
+preplace port port-id_sysclk_p -pg 1 -lvl 0 -x 0 -y 710 -defaultsOSRD
+preplace port port-id_sysclk_n -pg 1 -lvl 0 -x 0 -y 690 -defaultsOSRD
+preplace port port-id_RsTx -pg 1 -lvl 10 -x 8720 -y 400 -defaultsOSRD
+preplace port port-id_MTIME_IRQ -pg 1 -lvl 10 -x 8720 -y 470 -defaultsOSRD
+preplace portBus OUTPUT_LEDs -pg 1 -lvl 10 -x 8720 -y 670 -defaultsOSRD
+preplace portBus OUTPUT_LED_reset -pg 1 -lvl 10 -x 8720 -y 520 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 9 -x 8594 -y 670 -defaultsOSRD
+preplace inst BRAM -pg 1 -lvl 6 -x 5134 -y 550 -defaultsOSRD -resize 349 220
+preplace inst irqs -pg 1 -lvl 3 -x 2160 -y 480 -defaultsOSRD
+preplace inst Caches -pg 1 -lvl 4 -x 3034 -y 1000 -defaultsOSRD
+preplace inst AHBlite_Control -pg 1 -lvl 7 -x 7099 -y 192 -defaultsOSRD
+preplace inst AHB2TIMER_0 -pg 1 -lvl 2 -x 650 -y 200 -defaultsOSRD
+preplace inst AHB2UART_0 -pg 1 -lvl 2 -x 650 -y 490 -defaultsOSRD
+preplace inst CACHE_AHB_MUX_0 -pg 1 -lvl 5 -x 4390 -y 1040 -defaultsOSRD
+preplace inst RISCV_CORE -pg 1 -lvl 4 -x 3034 -y 550 -defaultsOSRD
+preplace inst mem_32_to_128 -pg 1 -lvl 3 -x 2160 -y 1640 -defaultsOSRD
+preplace inst Encryption -pg 1 -lvl 2 -x 650 -y 990 -defaultsOSRD
+preplace inst AHB2DUMP_0 -pg 1 -lvl 8 -x 8269 -y 670 -defaultsOSRD
+preplace inst high -pg 1 -lvl 3 -x 2160 -y 710 -defaultsOSRD
+preplace inst low -pg 1 -lvl 3 -x 2160 -y 606 -defaultsOSRD
+preplace inst low_1 -pg 1 -lvl 2 -x 650 -y 1844 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 7 -x 7099 -y 1274 -defaultsOSRD
+preplace inst xlconstant_9 -pg 1 -lvl 1 -x 140 -y 570 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 140 -y 700 -defaultsOSRD
+preplace netloc AHB2DUMP_0_HRDATA 1 6 3 6939 460 NJ 460 8460
+preplace netloc AHB2DUMP_0_HREADYOUT 1 6 3 6949 390 NJ 390 8470
+preplace netloc AHB2DUMP_0_LEDS 1 8 1 NJ 670
+preplace netloc AHB2TIMER_0_HRDATA 1 2 5 830 20 NJ 20 NJ 20 NJ 20 6889J
+preplace netloc AHB2TIMER_0_HREADYOUT 1 2 5 840 150 NJ 150 NJ 150 NJ 150 6869J
+preplace netloc AHB2TIMER_0_timer_irq 1 2 8 1790 300 N 300 N 300 N 300 6849 470 N 470 N 470 N
+preplace netloc AHB2UART_0_HRDATA 1 2 5 850 160 NJ 160 NJ 160 NJ 160 6879J
+preplace netloc AHB2UART_0_HREADYOUT 1 2 5 860 170 NJ 170 NJ 170 NJ 170 6849J
+preplace netloc AHB2UART_0_RsTx 1 2 8 1830J 330 NJ 330 3490J 370 NJ 370 6859J 400 NJ 400 NJ 400 NJ
+preplace netloc AHB2UART_0_uart_irq 1 2 1 1850 460n
+preplace netloc AHBDCD_0_HSEL_S0 1 5 3 4934 380 NJ 380 7270
+preplace netloc AHBDCD_0_HSEL_S2 1 7 1 7310 192n
+preplace netloc AHBDCD_0_HSEL_S4 1 1 7 360 -10 NJ -10 NJ -10 NJ -10 NJ -10 NJ -10 7250
+preplace netloc AHBDCD_0_HSEL_S7 1 1 7 370 0 NJ 0 NJ 0 NJ 0 NJ 0 NJ 0 7260
+preplace netloc AHBMUX_0_HRDATA 1 4 4 4130 360 NJ 360 NJ 360 7280
+preplace netloc AHB_CACHE_1_HREADYOUT 1 1 7 380 10 NJ 10 NJ 10 3400 410 4924 410 NJ 410 7290
+preplace netloc AHBlite_Control_HSEL_S8 1 1 7 450 330 1800J 290 NJ 290 NJ 290 NJ 290 6869J 370 7250
+preplace netloc BRAM_AHB_MUX_0_dat_HSIZE 1 5 3 4924 720 NJ 720 NJ
+preplace netloc BRAM_HRDATA 1 6 1 6919 112n
+preplace netloc BRAM_HREADYOUT 1 6 1 6929 192n
+preplace netloc CACHE_AHB_MUX_0_bram_addr_o 1 3 3 2814 730 NJ 730 4660
+preplace netloc CACHE_AHB_MUX_0_bram_be_o 1 3 3 2704 760 NJ 760 4680
+preplace netloc CACHE_AHB_MUX_0_bram_req_o 1 3 3 2714 140 NJ 140 4760
+preplace netloc CACHE_AHB_MUX_0_bram_wdata_o 1 3 3 2734 220 NJ 220 4690
+preplace netloc CACHE_AHB_MUX_0_bram_we_o 1 3 3 2774 260 NJ 260 4730
+preplace netloc CACHE_AHB_MUX_0_cache_data_bram_rdata_o 1 2 4 1820 180 NJ 180 NJ 180 4700
+preplace netloc CACHE_AHB_MUX_0_cache_data_bram_rvalid_o 1 2 4 1860 30 NJ 30 NJ 30 4790
+preplace netloc CACHE_AHB_MUX_0_cache_instr_bram_rdata_o 1 2 4 1870 40 NJ 40 NJ 40 4780
+preplace netloc CACHE_AHB_MUX_0_cache_instr_bram_rvalid_o 1 2 4 1880 60 NJ 60 NJ 60 4770
+preplace netloc CACHE_AHB_MUX_0_instr_addr_o 1 3 3 2724 190 NJ 190 4750
+preplace netloc CACHE_AHB_MUX_0_instr_rdata_o 1 3 3 2794 280 NJ 280 4650
+preplace netloc CACHE_AHB_MUX_0_instr_req_o 1 3 3 2784 270 NJ 270 4710
+preplace netloc CACHE_AHB_MUX_0_instr_rvalid_o 1 3 3 2744 230 NJ 230 4720
+preplace netloc CACHE_AHB_MUX_0_lsu_rdata_o 1 3 3 2754 240 NJ 240 4670
+preplace netloc CACHE_AHB_MUX_0_lsu_rvalid_o 1 3 3 2764 250 NJ 250 4740
+preplace netloc Caches_data_mem_address 1 1 4 410 40 900J 50 NJ 50 3320
+preplace netloc Caches_data_mem_dout 1 1 4 460 340 NJ 340 NJ 340 3310
+preplace netloc Caches_data_mem_req 1 1 4 480 350 NJ 350 NJ 350 3290
+preplace netloc Caches_data_mem_rw_enable 1 1 4 420 50 860J 70 NJ 70 3300
+preplace netloc Caches_mem_address 1 2 3 1900 320 NJ 320 3270
+preplace netloc Caches_mem_req 1 2 3 1910 770 NJ 770 3260
+preplace netloc Caches_mem_rw_enable 1 2 3 1920 780 NJ 780 3280
+preplace netloc Encryption_HREADYOUT 1 2 5 1810J 200 NJ 200 NJ 200 NJ 200 6889
+preplace netloc HRDATA_S8_1 1 2 5 1840J 210 NJ 210 NJ 210 NJ 210 6879
+preplace netloc RISCV_CORE_alert_major_o 1 2 3 1890 310 NJ 310 3260
+preplace netloc RISCV_CORE_data_addr_o 1 4 1 3440 540n
+preplace netloc RISCV_CORE_data_be_o 1 4 1 3430 560n
+preplace netloc RISCV_CORE_data_req_o 1 3 2 2814 370 3460
+preplace netloc RISCV_CORE_data_wdata_o 1 4 1 3410 600n
+preplace netloc RISCV_CORE_data_we_o 1 4 1 3420 580n
+preplace netloc RISCV_CORE_instr_addr_o 1 4 1 3450 480n
+preplace netloc RISCV_CORE_instr_req_o 1 3 2 2804 360 3470
+preplace netloc cache_16_way_0_cpu_dout 1 4 1 3390 900n
+preplace netloc data_cache_16_way_cache_hit_o 1 4 1 3330 960n
+preplace netloc data_cache_16_way_cpu_dout 1 4 1 3340 940n
+preplace netloc data_cache_line_address_i_1 1 2 1 830 1000n
+preplace netloc data_cache_line_req_i_1 1 2 1 860 980n
+preplace netloc data_cache_line_wdata_i_1 1 2 1 820 1020n
+preplace netloc data_cache_line_we_i_1 1 2 1 840 960n
+preplace netloc data_mem_din_1 1 2 2 NJ 1060 2644
+preplace netloc data_mem_ready_1 1 2 2 NJ 1040 2654
+preplace netloc inst_cache_16_way_cpu_ready 1 4 1 3380 920n
+preplace netloc low_1_dout 1 2 1 880J 1650n
+preplace netloc mem_32_to_128_data_bram_address_o 1 3 2 2764 1180 3450J
+preplace netloc mem_32_to_128_data_bram_req_o 1 3 2 2794 1190 3290J
+preplace netloc mem_32_to_128_data_cache_line_rdata_o 1 1 3 450 1190 NJ 1190 2400
+preplace netloc mem_32_to_128_data_cache_line_rvalid_o 1 1 3 470 1180 NJ 1180 2410
+preplace netloc mem_32_to_128_data_cache_line_wdata_o 1 3 2 2814 1200 3490J
+preplace netloc mem_32_to_128_data_cache_line_we_o 1 3 2 2694 810 3350J
+preplace netloc mem_32_to_128_inst_bram_address_o 1 3 2 2634 800 3370J
+preplace netloc mem_32_to_128_inst_bram_req_o 1 3 2 2684 1210 3470J
+preplace netloc mem_32_to_128_inst_cache_line_rdata_o 1 3 1 2664 1070n
+preplace netloc mem_32_to_128_inst_cache_line_rvalid_o 1 3 1 2674 1090n
+preplace netloc microblaze_0_Clk 1 1 7 350 790 1850 790 2614 750 4110 600 4884 400 6839 450 7250J
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 10 20 790 340 800 1830 800 2624 790 4120 750 4914 420 6909 520 8079 520 NJ 520 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HADDR 1 1 7 440 70 850J 80 NJ 80 NJ 80 4810 100 6899 12 7300J
+preplace netloc riscv_top_ahb3lite_0_dat_HTRANS 1 1 7 400 30 890J 90 NJ 90 NJ 90 4904 680 NJ 680 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HWDATA 1 1 7 390 20 820J 100 NJ 100 NJ 100 4800 740 NJ 740 NJ
+preplace netloc riscv_top_ahb3lite_0_dat_HWRITE 1 1 7 430 60 840J 110 NJ 110 NJ 110 4894 700 NJ 700 NJ
+preplace netloc sysclk_n_1 1 0 1 NJ 690
+preplace netloc sysclk_p_1 1 0 1 NJ 710
+preplace netloc xlconcat_0_dout 1 3 1 2694 480n
+preplace netloc xlconstant_0_dout 1 7 1 7250J 760n
+preplace netloc xlconstant_10_dout 1 3 2 2694 740 3360J
+preplace netloc xlconstant_4_dout 1 3 1 2654 470n
+preplace netloc xlconstant_9_dout 1 1 1 NJ 570
+preplace netloc xlslice_0_Dout 1 9 1 NJ 670
+levelinfo -pg 1 0 140 650 2160 3034 4390 5134 7099 8269 8594 8720
+pagesize -pg 1 -db -bbox -sgen -130 -20 9180 2460
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_board_cnt":"7",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"5",
+   "da_mb_cnt":"5"
+}

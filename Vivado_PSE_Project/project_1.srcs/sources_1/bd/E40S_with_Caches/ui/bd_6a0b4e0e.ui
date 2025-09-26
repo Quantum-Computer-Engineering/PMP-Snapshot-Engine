@@ -1,0 +1,70 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.871725",
+   "Default View_TopLeft":"-296,85",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace port port-id_sys_reset -pg 1 -lvl 0 -x -10 -y 250 -defaultsOSRD
+preplace port port-id_inst_cpu_req_pulsed_trigger -pg 1 -lvl 0 -x -10 -y 620 -defaultsOSRD
+preplace port port-id_inst_cpu_req -pg 1 -lvl 0 -x -10 -y 430 -defaultsOSRD
+preplace port port-id_inst_cache_hit_o -pg 1 -lvl 4 -x 1300 -y 640 -defaultsOSRD
+preplace port port-id_data_cpu_req_pulsed_trigger -pg 1 -lvl 0 -x -10 -y 310 -defaultsOSRD
+preplace port port-id_data_cpu_rw_enable -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace port port-id_data_cache_hit_o -pg 1 -lvl 4 -x 1300 -y 290 -defaultsOSRD
+preplace port port-id_inst_mem_req -pg 1 -lvl 4 -x 1300 -y 700 -defaultsOSRD
+preplace port port-id_inst_mem_rw_enable -pg 1 -lvl 4 -x 1300 -y 720 -defaultsOSRD
+preplace port port-id_inst_mem_ready -pg 1 -lvl 0 -x -10 -y 760 -defaultsOSRD
+preplace port port-id_data_mem_req -pg 1 -lvl 4 -x 1300 -y 350 -defaultsOSRD
+preplace port port-id_data_mem_rw_enable -pg 1 -lvl 4 -x 1300 -y 370 -defaultsOSRD
+preplace port port-id_data_mem_ready -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace portBus inst_cpu_address_pulsed -pg 1 -lvl 0 -x -10 -y 510 -defaultsOSRD
+preplace portBus inst_cpu_dout -pg 1 -lvl 4 -x 1300 -y 620 -defaultsOSRD
+preplace portBus data_cpu_address_pulsed -pg 1 -lvl 0 -x -10 -y 270 -defaultsOSRD
+preplace portBus data_cpu_din -pg 1 -lvl 0 -x -10 -y 290 -defaultsOSRD
+preplace portBus data_cpu_dout -pg 1 -lvl 4 -x 1300 -y 270 -defaultsOSRD
+preplace portBus data_cpu_byte_en -pg 1 -lvl 0 -x -10 -y 370 -defaultsOSRD
+preplace portBus inst_mem_din -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace portBus inst_mem_address -pg 1 -lvl 4 -x 1300 -y 680 -defaultsOSRD
+preplace portBus data_mem_din -pg 1 -lvl 0 -x -10 -y 390 -defaultsOSRD
+preplace portBus data_mem_dout -pg 1 -lvl 4 -x 1300 -y 310 -defaultsOSRD
+preplace portBus data_mem_address -pg 1 -lvl 4 -x 1300 -y 330 -defaultsOSRD
+preplace inst inst_cache_16_way -pg 1 -lvl 2 -x 510 -y 680 -defaultsOSRD
+preplace inst data_cache_16_way -pg 1 -lvl 2 -x 510 -y 330 -defaultsOSRD
+preplace inst din_low -pg 1 -lvl 1 -x 100 -y 550 -defaultsOSRD
+preplace inst low -pg 1 -lvl 1 -x 100 -y 800 -defaultsOSRD
+preplace inst low_0 -pg 1 -lvl 1 -x 100 -y 680 -defaultsOSRD
+preplace netloc CACHE_AHB_MUX_0_bram_addr_o 1 0 2 NJ 270 NJ
+preplace netloc CACHE_AHB_MUX_0_bram_be_o 1 0 2 NJ 370 NJ
+preplace netloc CACHE_AHB_MUX_0_bram_we_o 1 0 2 NJ 350 NJ
+preplace netloc CACHE_AHB_MUX_0_instr_addr_o 1 0 2 10J 490 250J
+preplace netloc CACHE_AHB_MUX_0_instr_req_o 1 0 2 10J 610 240
+preplace netloc cache_16_way_0_cpu_dout 1 2 2 NJ 620 NJ
+preplace netloc cpu_din1_1 1 0 2 NJ 290 NJ
+preplace netloc data_cache_16_way_cache_hit_o 1 2 2 NJ 290 NJ
+preplace netloc data_cache_16_way_cpu_dout 1 2 2 NJ 270 NJ
+preplace netloc data_cache_16_way_mem_address 1 2 2 N 330 NJ
+preplace netloc data_cache_16_way_mem_dout 1 2 2 N 310 NJ
+preplace netloc data_cache_16_way_mem_req 1 2 2 N 350 NJ
+preplace netloc data_cache_16_way_mem_rw_enable 1 2 2 N 370 NJ
+preplace netloc data_cpu_req_pulsed_trigger_1 1 0 2 NJ 310 N
+preplace netloc data_mem_din 1 0 2 NJ 390 NJ
+preplace netloc high1_dout 1 1 1 280J 720n
+preplace netloc high2_dout 1 1 1 270J 330n
+preplace netloc inst_cache_16_way_cpu_ready 1 2 2 NJ 640 NJ
+preplace netloc inst_cache_16_way_mem_address 1 2 2 N 680 NJ
+preplace netloc inst_cache_16_way_mem_req 1 2 2 N 700 NJ
+preplace netloc inst_cache_16_way_mem_rw_enable 1 2 2 N 720 NJ
+preplace netloc inst_mem_din 1 0 2 20J 620 190J
+preplace netloc low_0_dout 1 1 1 280J 680n
+preplace netloc mem_ready1_1 1 0 2 NJ 410 NJ
+preplace netloc mem_ready_1 1 0 2 10J 740 180J
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 0 2 NJ 250 260
+preplace netloc sys_clock_1 1 0 2 NJ 230 280
+preplace netloc xlconstant_4_dout 1 0 2 10J 330 230
+levelinfo -pg 1 -10 100 510 1040 1300
+pagesize -pg 1 -db -bbox -sgen -270 -10 1540 1020
+"
+}
+0

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="cv32e40s_pkg" />
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="26.450000001 ms"></ZoomEndTime>
+      <Cursor1Time time="8.050000000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="277"></NameColumnWidth>
+      <ValueColumnWidth column_width="193"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="99" />
+   <wave_markers>
+      <marker label="" time="40250590000" />
+      <marker label="" time="40151390000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/tb/tb_clk">
+      <obj_property name="ElementShortName">tb_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/tb_reset">
+      <obj_property name="ElementShortName">tb_reset</obj_property>
+      <obj_property name="ObjectShortName">tb_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Stages</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Set</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/OUTPUT_LEDs">
+      <obj_property name="ElementShortName">OUTPUT_LEDs[2:0]</obj_property>
+      <obj_property name="ObjectShortName">OUTPUT_LEDs[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2DUMP_0/FI_SIM_DONE_SIG">
+      <obj_property name="ElementShortName">FI_SIM_DONE_SIG</obj_property>
+      <obj_property name="ObjectShortName">FI_SIM_DONE_SIG</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2DUMP_0/FI_SIM_PASS_SIG">
+      <obj_property name="ElementShortName">FI_SIM_PASS_SIG</obj_property>
+      <obj_property name="ObjectShortName">FI_SIM_PASS_SIG</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Set end</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/irq_i">
+      <obj_property name="ElementShortName">irq_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">irq_i[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Enc Ctrl</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">PSE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/alert_major_o">
+      <obj_property name="ElementShortName">alert_major_o</obj_property>
+      <obj_property name="ObjectShortName">alert_major_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Parity Unit</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Sth</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">mepc debug</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/mepc">
+      <obj_property name="ElementShortName">mepc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mepc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/inst/mtimecmp">
+      <obj_property name="ElementShortName">mtimecmp[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtimecmp[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/inst/mtime">
+      <obj_property name="ElementShortName">mtime[63:0]</obj_property>
+      <obj_property name="ObjectShortName">mtime[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/inst/timer_irq_o">
+      <obj_property name="ElementShortName">timer_irq_o</obj_property>
+      <obj_property name="ObjectShortName">timer_irq_o</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/mepc_csr_i/wr_en_i">
+      <obj_property name="ElementShortName">wr_en_i</obj_property>
+      <obj_property name="ObjectShortName">wr_en_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/mepc_csr_i/wr_data_i">
+      <obj_property name="ElementShortName">wr_data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/mepc_csr_i/rdata_q">
+      <obj_property name="ElementShortName">rdata_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/ctrl_fsm_i.csr_save_cause">
+      <obj_property name="ElementShortName">.csr_save_cause</obj_property>
+      <obj_property name="ObjectShortName">.csr_save_cause</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">mcause</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_addr_o">
+      <obj_property name="ElementShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/CACHE_AHB_MUX_0/lsu_addr_i">
+      <obj_property name="ElementShortName">lsu_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">lsu_addr_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/CACHE_AHB_MUX_0/inst/lsu_addr_i">
+      <obj_property name="ElementShortName">lsu_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">lsu_addr_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/CACHE_AHB_MUX_0/data_addr_o">
+      <obj_property name="ElementShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/ex_wb_pipe.pc">
+      <obj_property name="ElementShortName">.pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">.pc[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/priv_lvl">
+      <obj_property name="ElementShortName">priv_lvl[1:0]</obj_property>
+      <obj_property name="ObjectShortName">priv_lvl[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/controller_i/controller_fsm_i/ctrl_fsm_cs">
+      <obj_property name="ElementShortName">ctrl_fsm_cs[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_fsm_cs[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/controller_i/controller_fsm_i/interrupt_allowed">
+      <obj_property name="ElementShortName">interrupt_allowed</obj_property>
+      <obj_property name="ObjectShortName">interrupt_allowed</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/controller_i/controller_fsm_i/pending_interrupt">
+      <obj_property name="ElementShortName">pending_interrupt</obj_property>
+      <obj_property name="ObjectShortName">pending_interrupt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/\gen_basic_interrupt.int_controller_i /irq_req_ctrl_o">
+      <obj_property name="ElementShortName">irq_req_ctrl_o</obj_property>
+      <obj_property name="ObjectShortName">irq_req_ctrl_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_req_o">
+      <obj_property name="ElementShortName">data_req_o</obj_property>
+      <obj_property name="ObjectShortName">data_req_o</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_we_o">
+      <obj_property name="ElementShortName">data_we_o</obj_property>
+      <obj_property name="ObjectShortName">data_we_o</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_addr_o">
+      <obj_property name="ElementShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_rvalid_i">
+      <obj_property name="ElementShortName">data_rvalid_i</obj_property>
+      <obj_property name="ObjectShortName">data_rvalid_i</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_wdata_o">
+      <obj_property name="ElementShortName">data_wdata_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_wdata_o[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/data_rdata_i">
+      <obj_property name="ElementShortName">data_rdata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rdata_i[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">LSU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/load_store_unit_i/rdata_q">
+      <obj_property name="ElementShortName">rdata_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/data_addr_o">
+      <obj_property name="ElementShortName">data_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/data_req_o">
+      <obj_property name="ElementShortName">data_req_o</obj_property>
+      <obj_property name="ObjectShortName">data_req_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/data_rvalid_i">
+      <obj_property name="ElementShortName">data_rvalid_i</obj_property>
+      <obj_property name="ObjectShortName">data_rvalid_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/data_rdata_i">
+      <obj_property name="ElementShortName">data_rdata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_rdata_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/data_be_o">
+      <obj_property name="ElementShortName">data_be_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_be_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/load_store_unit_i/rdata_offset_q">
+      <obj_property name="ElementShortName">rdata_offset_q[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_offset_q[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">PSE slot 2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">UART</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/HWRITE">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/tx_empty">
+      <obj_property name="ElementShortName">tx_empty</obj_property>
+      <obj_property name="ObjectShortName">tx_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Alert</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/inst/timer_irq_o">
+      <obj_property name="ElementShortName">timer_irq_o</obj_property>
+      <obj_property name="ObjectShortName">timer_irq_o</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/inst/HWDATA">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HREADYOUT">
+      <obj_property name="ElementShortName">HREADYOUT</obj_property>
+      <obj_property name="ObjectShortName">HREADYOUT</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HADDR">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HCLK">
+      <obj_property name="ElementShortName">HCLK</obj_property>
+      <obj_property name="ObjectShortName">HCLK</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HRDATA">
+      <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HREADY">
+      <obj_property name="ElementShortName">HREADY</obj_property>
+      <obj_property name="ObjectShortName">HREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HRESETn">
+      <obj_property name="ElementShortName">HRESETn</obj_property>
+      <obj_property name="ObjectShortName">HRESETn</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HSEL">
+      <obj_property name="ElementShortName">HSEL</obj_property>
+      <obj_property name="ObjectShortName">HSEL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HTRANS">
+      <obj_property name="ElementShortName">HTRANS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">HTRANS[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HWDATA">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/HWRITE">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/timer_irq_o">
+      <obj_property name="ElementShortName">timer_irq_o</obj_property>
+      <obj_property name="ObjectShortName">timer_irq_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2TIMER_0/timer_irq_o">
+      <obj_property name="ElementShortName">timer_irq_o</obj_property>
+      <obj_property name="ObjectShortName">timer_irq_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">PMP General</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group2651">
+      <obj_property name="label">pmp</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/pmpncfg_q">
+      <obj_property name="ElementShortName">pmpncfg_q[0:15]</obj_property>
+      <obj_property name="ObjectShortName">pmpncfg_q[0:15]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/RISCV_CORE/inst/u_cv32e40s_core/cs_registers_i/pmp_addr_q">
+      <obj_property name="ElementShortName">pmp_addr_q[0:15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">pmp_addr_q[0:15][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">alert_i</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">regs</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Print</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/RsTx">
+      <obj_property name="ElementShortName">RsTx</obj_property>
+      <obj_property name="ObjectShortName">RsTx</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/RsTx">
+      <obj_property name="ElementShortName">RsTx</obj_property>
+      <obj_property name="ObjectShortName">RsTx</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/tx_full">
+      <obj_property name="ElementShortName">tx_full</obj_property>
+      <obj_property name="ObjectShortName">tx_full</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/tx_empty">
+      <obj_property name="ElementShortName">tx_empty</obj_property>
+      <obj_property name="ObjectShortName">tx_empty</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/tx_done">
+      <obj_property name="ElementShortName">tx_done</obj_property>
+      <obj_property name="ObjectShortName">tx_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/tx_data">
+      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/status">
+      <obj_property name="ElementShortName">status[7:0]</obj_property>
+      <obj_property name="ObjectShortName">status[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/uart_wdata">
+      <obj_property name="ElementShortName">uart_wdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_wdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/uart_irq">
+      <obj_property name="ElementShortName">uart_irq</obj_property>
+      <obj_property name="ObjectShortName">uart_irq</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/CV32E40S_SoC_with_Caches/E40S_with_Caches_i/AHB2UART_0/inst/uFIFO_TX/array_reg">
+      <obj_property name="ElementShortName">array_reg[15:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">array_reg[15:0][7:0]</obj_property>
+      <obj_property name="Radix">ASCIIRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider265" type="divider">
+      <obj_property name="label">Inst Cache</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">32_to_128</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Inst Cache internals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider265" type="divider">
+      <obj_property name="label">Cache to mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider265" type="divider">
+      <obj_property name="label">CACHE_AHB_MUX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider265" type="divider">
+      <obj_property name="label">--</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">DCACHE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">32to128 data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">AHB2MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider198" type="divider">
+      <obj_property name="label">BRAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider352" type="divider">
+      <obj_property name="label">BRAM actual</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">PMP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+</wave_config>

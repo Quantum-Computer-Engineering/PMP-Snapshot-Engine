@@ -1,0 +1,328 @@
+module UA_encrypt
+    #(
+        parameter	ADDRESS_SIZE	=	32,
+        parameter	NUMBER_OF_BYTES	=	16,
+        parameter	DATA_WIDTH		=	NUMBER_OF_BYTES * 8,
+        parameter   MEM_ADDR_BITS		=	15,	
+        parameter   ENABLE_ADDR_TWEAK = 0,
+        parameter   ENC_ENABLED     = 0
+    )
+    (
+        //Clock and reset
+        input   wire                    clock,
+        input   wire                    reset,
+        
+        input   wire                    decryption_enabled_cpu,
+        input   wire                    write_back_encryption_enabled,
+        
+        //Cache side connections
+        output  wire [DATA_WIDTH-1:0]   cache_rdata,
+        input   wire [DATA_WIDTH-1:0]   cache_wdata,
+        input   wire [MEM_ADDR_BITS-1:0] cache_address,
+        input   wire                    cache_req,
+        input   wire                    cache_rw_enable,
+        output  wire                    cache_ready,
+        
+        //Memory side connections
+        input   wire [DATA_WIDTH-1:0]   mem_rdata,
+        output  wire [DATA_WIDTH-1:0]   mem_wdata,
+        output  wire [MEM_ADDR_BITS-1:0] mem_address,
+        output  wire                    mem_req,
+        output  wire                    mem_rw_enable,
+        input   wire                    mem_valid,
+
+        input   wire [127:0]            key_i,
+        input   wire                    key_valid_i,
+        
+        //Debug output
+        output  wire    [7:0]           debug
+    );
+    
+    //Hashing/encryption key
+    // localparam                  KEY     =   128'h000102030405060708090a0b0c0d0e0f;
+    
+
+    
+    // Registers and states for state machine
+    reg		[3:0]                   state, next_state;
+    localparam                      IDLE    =   4'b0000,
+                                    READ    =   4'b0001,
+                                    DECRYPT =   4'b0010,
+                                    WRITE   =   4'b0100,
+                                    ENCRYPT =   4'b0101,
+                                    END     =   4'b1000;
+                
+    // Wires and registers for internal signals
+    // Data address
+    reg     [ADDRESS_SIZE-1:0]      address;
+    // Data coming from memory
+    reg     [DATA_WIDTH-1:0]        data_in;
+    // Data going to memory
+    reg     [DATA_WIDTH-1:0]        data_out;
+
+
+    // Holds request signal to memory
+    reg                             mem_request;
+    // Holds whether data is read or written to memory. 1 is write.
+    reg                             mem_rw;
+
+    
+    //  Encryption block signals
+    reg                             cry_enc_dec;
+    reg     [DATA_WIDTH-1:0]        cry_din;
+    wire    [DATA_WIDTH-1:0]        cry_dout;
+    wire                            cry_rdy;
+    reg                             cry_run;
+
+    wire                            crypto_enabled;
+    wire                            skip_crypto;
+    
+    generate
+    if (ENC_ENABLED) begin : GEN_USE_PRINCE
+    assign crypto_enabled = cache_rw_enable ? write_back_encryption_enabled : decryption_enabled_cpu;
+    assign skip_crypto = !crypto_enabled;
+    
+    // Assign output wires                     | Skip crypto    | Default assignment
+    if (ENABLE_ADDR_TWEAK) begin
+        assign mem_wdata       = skip_crypto ? cache_wdata        : (data_out ^ cache_address);
+        assign cache_rdata     = skip_crypto ? mem_rdata          : ((state == END) ? (cry_dout ^ address) : 0);
+    end
+    else begin
+        assign cache_rdata     = skip_crypto ? mem_rdata          : ((state == END) ? cry_dout : 0);
+        assign mem_wdata       = skip_crypto ? cache_wdata        : data_out;
+    end
+    assign mem_address     = skip_crypto ? cache_address      : address;
+    assign mem_req         = skip_crypto ? cache_req          : mem_request;
+    assign mem_rw_enable   = skip_crypto ? cache_rw_enable    : mem_rw;
+    assign cache_ready     = skip_crypto ? mem_valid          : ((state == END) ? 1 : 0);
+
+    
+  // Reset and state switches
+    always @(posedge clock, negedge reset)
+    begin
+        if (!reset) begin
+            state                       <=  IDLE;
+        end
+        else begin
+            state                       <=  next_state;
+        end
+    end
+    
+//    integer fd;
+//    initial fd = $fopen("encryption_debug.txt", "w");
+    
+    // State machine
+    // Events per state to switch to next state
+    always @*
+    begin
+        case (state)		
+        //  IDLE STATE================================================================================
+            IDLE: begin 
+                // When cache wants something, start state machine
+                if(cache_req && !skip_crypto) begin
+                    // Debug
+//                     $fwrite(fd, "%x, %x, %x. %x\n", cache_address, cache_wdata, cache_rdata, skip_crypto);
+                    
+                    // If write operation, go encrypt first
+                    if(cache_rw_enable) begin
+                        next_state  =  ENCRYPT;
+                    end
+                    // If read operation, go read data from memory
+                    else begin
+                        next_state      =  READ;
+                    end              
+                end
+                // Else remain in idle
+                else begin
+                    next_state          =   IDLE;
+                end
+            end
+            
+            
+        //  READ STATE================================================================================
+            READ: begin
+                // When data has been received, go decrypt
+                if(mem_valid) begin 
+                    next_state          =  DECRYPT;
+                end
+                else begin
+                    next_state          =   READ;
+                end
+            end
+            
+        //  DECRYPT STATE===========================================================================
+            DECRYPT: begin
+                // Go straight to end once decryption is complete
+                if(cry_rdy) begin
+                    next_state      =   END;
+                end
+                else begin
+                    next_state          =   DECRYPT;
+                end
+            end
+            
+
+        //  WRITE STATE============================================================================
+            WRITE: begin
+                // Go straight to end when done writing data to memory
+                if(mem_valid) begin
+                    next_state      =   END;
+                end
+                else begin
+                    next_state          =   WRITE;
+                end
+            end 
+            
+            
+        //  ENCRYPT STATE==========================================================================
+            ENCRYPT: begin
+                // When encryption is done, go to write data to memory
+                if(cry_rdy) begin
+                    next_state          =   WRITE;
+                end
+                else begin
+                    next_state          =   ENCRYPT;
+                end
+            end
+            
+
+        //  END STATE============================================================================
+            END: begin
+                next_state              =   IDLE;
+            end
+            
+            default: begin
+                next_state              =   IDLE;
+            end
+        endcase
+    end
+    
+    
+    
+    // State descriptions
+    // Activities performed per state
+    always @ (posedge clock, negedge reset)
+    begin
+        if(!reset) begin
+            mem_request                 <=  0;
+            mem_rw                      <=  0;
+            address                     <=  0;
+            
+            cry_run                     <=  0;
+            
+            cry_din                     <=  0;
+            cry_enc_dec                 <=  0;
+    
+            data_out                    <=  0;
+            
+            data_in                     <=  0;
+        end 
+        else begin
+            case (state)
+            //  READ STATE-------------------------------------
+                READ: begin
+                    // Read encrypted data
+                    if(!mem_valid) begin
+                        mem_request         <=  1;
+                        mem_rw              <=  0;
+                        data_in             <=  mem_rdata;  
+                        address             <=  cache_address;
+                    end
+                    // Once the memory is done, set request back to zero
+                    else begin
+                        mem_request         <=  0;
+                    end
+                end
+                
+            //  WRITE STATE-------------------------------------------
+                WRITE: begin
+                    // Write encrypted data
+                    if(!mem_valid) begin
+                        mem_request         <=  1;
+                        mem_rw              <=  1;
+                        address             <=  cache_address;
+                        data_out            <=  cry_dout;
+                    end
+                    // Once the memory is done, set request back to zero
+                    else begin
+                        mem_request         <=  0;
+                    end
+                end
+                
+            //  ENCRYPT STATE--------------------------------------------
+                ENCRYPT: begin
+                    // Let crypto block read data and start encrypting                   
+                    if (ENABLE_ADDR_TWEAK) begin
+                        cry_din             <=  cache_wdata ^ cache_address;
+                    end
+                    else begin
+                        cry_din             <=  cache_wdata;
+                    end  
+                    cry_enc_dec         <=  1;
+                    cry_run             <=  1;
+                end
+                            
+            //  DECRYPT STATE-------------------------------------
+                DECRYPT: begin 
+                    // Let crypto block read data and start decrypting 
+                    if (ENABLE_ADDR_TWEAK) begin
+                        cry_din             <=  data_in ^ cache_address;
+                    end
+                    else begin
+                        cry_din             <=  data_in;
+                    end  
+                    cry_enc_dec         <=  0;          
+                    cry_run             <=  1;
+                end
+
+                
+            //  END STATE-----------------------------------------------
+                END: begin
+                    // Resets internal flags back to idle values
+                    cry_run             <=  0;
+                end
+
+            endcase
+        end
+    end
+        
+    reg [127:0] key_from_encrypt_ctrl;
+
+    always @(posedge clock, negedge reset)
+    begin
+        if (!reset) begin
+            key_from_encrypt_ctrl <=  127'h0;
+        end
+        else begin
+            if (key_valid_i) begin
+                key_from_encrypt_ctrl <=  key_i;
+            end
+        end
+    end
+
+
+    
+    // Encryption/decryption block
+    crypto
+    crypto_prince
+        (
+            .clock(clock),
+            .reset(!reset),
+            .key(key_from_encrypt_ctrl),
+            .run(cry_run),
+            .din(cry_din),
+            .enc_dec(cry_enc_dec),
+            .dout(cry_dout),
+            .ready(cry_rdy)
+        );   
+    end
+    else begin: NO_PRINCE  // (ENC_ENABLED)
+        assign cache_rdata  = mem_rdata;
+        assign mem_wdata    = cache_wdata;
+        assign mem_address  = cache_address;
+        assign mem_req      = cache_req;
+        assign mem_rw_enable = cache_rw_enable;
+        assign cache_ready  = mem_valid;
+    end  // (ENC_ENABLED)
+    endgenerate
+endmodule
