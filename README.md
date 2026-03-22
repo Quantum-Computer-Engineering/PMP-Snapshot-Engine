@@ -227,4 +227,4 @@ If you use this work in academic or industrial research, please cite it as "tba"
 ## Licensing
 
 - Software (C sources, scripts, Makefiles, Python utilities): Apache License 2.0 — see `LICENSES/Apache-2.0.txt`.
-- Hardware/HDL (RTL, block designs, constraints and PSE sources): Solderpad Hardware License v2.1 — see `LICENSES/Solderpad-0.51.txt`.
+- Hardware/HDL (RTL, block designs, constraints and PSE sources): Solderpad Hardware License v0.51 — see `LICENSES/Solderpad-0.51.txt`.
