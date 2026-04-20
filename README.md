@@ -221,7 +221,7 @@ For ready‑made BRAM images/bitstream and the exact “for FPGA vs. for FI” `
 
 ## Citation
 
-If you use this work in academic or industrial research, please cite it as "tba".
+If you use this work in academic or industrial research, please cite it as "Christian Larmann, Abdullah Aljuffri, Adrian Marotzke, Alejandro Garza, Said Hamdioui and Mottaqiallah Taouil. The PMP Snapshot Engine: Fast and Fault-Resilient PMP Reconfiguration for RISC-V. Design, Automation and Test in Europe (DATE 2026)."
 
 
 ## Licensing
